@@ -1,0 +1,39 @@
+{
+  "clients": {
+    "web": {
+      "version": "2.20260623.01.00"
+    },
+    "ios": {
+      "version": "20.11.6",
+      "ua": "com.google.ios.youtube/20.11.6 (iPhone10,4; U; CPU iOS 16_7_7 like Mac OS X)",
+      "deviceModel": "iPhone10,4",
+      "osVersion": "16.7.7.20H330"
+    },
+    "android": {
+      "version": "21.03.36",
+      "ua": "com.google.android.youtube/21.03.36(Linux; U; Android 16; en_US; SM-S908E Build/TP1A.220624.014) gzip",
+      "sdk": 36,
+      "osVersion": "16"
+    }
+  },
+  "trendingQueries": [
+    "new",
+    "official video",
+    "highlights",
+    "trailer",
+    "vlog",
+    "song",
+    "news",
+    "review"
+  ],
+  "pipedInstances": [
+    "https://pipedapi.ducks.party",
+    "https://api.piped.private.coffee",
+    "https://pipedapi.kavin.rocks",
+    "https://pipedapi.adminforge.de"
+  ],
+  "minVersion": "1.0.0",
+  "updateUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/latest/download/AdFree-Tube.apk",
+  "latestVersion": "1.0.0",
+  "latestNotes": ""
+}
