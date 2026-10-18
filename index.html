@@ -186,6 +186,16 @@
       background: var(--grad); font-weight: 800; font-size: 14px;
     }
 
+    /* ---------- versions ---------- */
+    .versions { max-width: 820px; margin: 0 auto; display: grid; gap: 12px; }
+    .ver { display: flex; gap: 20px; align-items: flex-start; }
+    .ver .info { flex: 1; min-width: 0; }
+    .ver h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .ver .when { color: var(--faint); font-size: 13.5px; margin: 0 0 8px; }
+    .ver .btn { height: 40px; padding: 0 16px; font-size: 14px; flex: 0 0 auto; }
+    .ver .tag { margin-left: 0; background: rgba(74,222,128,.14); color: var(--green); }
+    @media (max-width: 620px) { .ver { flex-direction: column; gap: 14px; } }
+
     /* ---------- faq ---------- */
     .faq { max-width: 820px; margin: 0 auto; }
     details { border-bottom: 1px solid var(--line); padding: 4px 0; }
@@ -282,6 +292,7 @@
         <a href="#compare">Compare</a>
         <a href="#screens">Screens</a>
         <a href="#install">Install</a>
+        <a href="#versions">Versions</a>
         <a href="#faq">FAQ</a>
       </div>
       <a class="btn btn-primary js-download" href="download/AdFree-Tube.apk">
@@ -506,6 +517,17 @@
       </div>
     </section>
 
+    <section id="versions">
+      <div class="wrap">
+        <div class="center reveal">
+          <div class="eyebrow">Versions</div>
+          <h2>Every version, one tap away.</h2>
+          <p class="section-lead">The newest version is always best, but if you need an older one it's here.</p>
+        </div>
+        <div class="versions js-versions"></div>
+      </div>
+    </section>
+
     <section id="faq">
       <div class="wrap">
         <div class="center reveal">
@@ -544,7 +566,7 @@
     <div class="wrap">
       <div class="brand" style="color:var(--text)"><svg><use href="#logo" /></svg>AdFree Tube</div>
       <p class="disclaimer">AdFree Tube is an independent project. It is not affiliated with, endorsed by or sponsored by YouTube or Google. All videos, thumbnails and trademarks belong to their respective owners.</p>
-      <div style="display:flex;gap:20px"><a href="#faq">FAQ</a></div>
+      <div style="display:flex;gap:20px"><a href="#versions">All versions</a><a href="#faq">FAQ</a></div>
     </div>
   </footer>
 
@@ -577,6 +599,37 @@
           }
         })
         .catch(function () { /* keep the static text */ });
+
+      // All versions list from versions.json (newest first), updated by the release script.
+      fetch('versions.json', { cache: 'no-store' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (list) {
+          var box = document.querySelector('.js-versions');
+          if (!box || !list || !list.length) return;
+          list.forEach(function (v, i) {
+            var card = document.createElement('div');
+            card.className = 'card ver';
+            var info = document.createElement('div');
+            info.className = 'info';
+            var h = document.createElement('h3');
+            h.textContent = 'Version ' + v.version;
+            if (i === 0) { var t = document.createElement('span'); t.className = 'tag'; t.textContent = 'LATEST'; h.appendChild(t); }
+            var when = document.createElement('p');
+            when.className = 'when';
+            when.textContent = new Date(v.date).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' }) + ' · ' + mb(v.size);
+            var notes = document.createElement('p');
+            notes.textContent = v.notes;
+            info.append(h, when, notes);
+            var a = document.createElement('a');
+            a.className = 'btn ' + (i === 0 ? 'btn-primary' : 'btn-ghost');
+            a.href = v.file;
+            a.innerHTML = '<svg><use href="#android" /></svg>';
+            a.append('Download');
+            card.append(info, a);
+            box.appendChild(card);
+          });
+        })
+        .catch(function () {});
 
       // Fade sections in as they scroll into view.
       var els = document.querySelectorAll('.reveal');
