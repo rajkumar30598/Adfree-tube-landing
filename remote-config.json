@@ -34,8 +34,8 @@
   ],
   "minVersion": "1.0.0",
   "updateUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/latest/download/AdFree-Tube.apk",
-  "latestVersion": "1.4.0",
-  "latestNotes": "Shorts are fresh every time you open them, and pull down to refresh. Drag any bottom sheet down to close it. Daily goal: custom times, and choose to be reminded once, every 30 min, or have the video pause. Hidden words: quick add, undo, and a count of what was hidden today.",
-  "apkSize": 56096864,
-  "releasedAt": "2026-10-18T15:25:12.599Z"
+  "latestVersion": "1.5.0",
+  "latestNotes": "Smoother playback and bug fixes. Adds anonymous usage stats to help improve the app — no ads, no ad tracking.",
+  "apkSize": 56719063,
+  "releasedAt": "2026-10-18T16:37:42.260Z"
 }
