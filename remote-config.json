@@ -34,8 +34,8 @@
   ],
   "minVersion": "1.0.0",
   "updateUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/latest/download/AdFree-Tube.apk",
-  "latestVersion": "1.3.1",
-  "latestNotes": "Shorts: one swipe now moves exactly one Short, even when you swipe fast. Fixed Shorts audio sometimes playing after you leave the Shorts tab, and a leftover play icon after swiping back to a Short.",
-  "apkSize": 56076084,
-  "releasedAt": "2026-10-18T10:42:11.118Z"
+  "latestVersion": "1.4.0",
+  "latestNotes": "Shorts are fresh every time you open them, and pull down to refresh. Drag any bottom sheet down to close it. Daily goal: custom times, and choose to be reminded once, every 30 min, or have the video pause. Hidden words: quick add, undo, and a count of what was hidden today.",
+  "apkSize": 56096864,
+  "releasedAt": "2026-10-18T15:25:12.599Z"
 }
