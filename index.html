@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AdFree Tube — Every video. Zero ads.</title>
-  <meta name="description" content="A free, private video player for Android with no ads, background play, picture-in-picture, offline downloads, SponsorBlock and more. No account needed." />
+  <meta name="description" content="A free, private video player for Android with no ads, background play, picture-in-picture, offline downloads, a music player with synced lyrics, SponsorBlock and more. No account needed." />
   <meta name="theme-color" content="#0b0b0c" />
   <meta property="og:title" content="AdFree Tube — Every video. Zero ads." />
-  <meta property="og:description" content="No ads, background play, picture-in-picture and offline downloads. Free, private, no account." />
+  <meta property="og:description" content="No ads, background play, picture-in-picture, offline downloads and a music player with lyrics. Free, private, no account." />
   <meta property="og:image" content="assets/icon-512.png" />
   <meta property="og:type" content="website" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
@@ -115,6 +115,7 @@
     .glow { position: absolute; inset: 15% 20%; background: var(--grad); filter: blur(90px); opacity: .35; border-radius: 50%; }
 
     /* ---------- stats ---------- */
+    .hero .wrap + .wrap { display: block; }
     .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin: 30px auto 0; }
     .stat { background: var(--bg-2); padding: 22px 20px; text-align: center; }
     .stat b { display: block; font-size: 30px; font-weight: 900; letter-spacing: -0.03em; }
@@ -144,6 +145,17 @@
     .card.big { grid-column: span 2; display: flex; gap: 22px; align-items: center; }
     .card.big .bigtxt { flex: 1; }
     .tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; padding: 3px 8px; border-radius: 6px; background: rgba(124,92,255,.15); color: #b9a8ff; margin-left: 6px; vertical-align: 2px; }
+
+    /* ---------- music ---------- */
+    .music { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .music .section-lead { margin-bottom: 28px; }
+    .ticks { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+    .ticks li { display: flex; gap: 12px; color: var(--dim); font-size: 15.5px; }
+    .ticks li b { color: var(--text); font-weight: 700; }
+    .ticks svg { flex: 0 0 18px; width: 18px; height: 18px; margin-top: 3px; color: var(--green); }
+    .music-shot { position: relative; display: flex; justify-content: center; }
+    .music-shot .phone { position: relative; width: 300px; }
+    .music-shot .glow { inset: 10% 15%; }
 
     /* ---------- compare ---------- */
     .compare { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--bg-2); }
@@ -195,7 +207,11 @@
       border: 1px solid var(--line);
     }
     .final h2 { margin-top: 18px; }
+    .final .section-lead { margin-left: auto; margin-right: auto; }
     .final .cta { justify-content: center; }
+    .whats-new { display: none; max-width: 620px; margin: 22px auto 0; font-size: 14.5px; color: var(--dim); }
+    .whats-new.on { display: block; }
+    .whats-new b { color: var(--text); }
 
     footer { padding: 50px 0 60px; color: var(--faint); font-size: 13.5px; }
     footer .wrap { display: flex; flex-wrap: wrap; gap: 14px 30px; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 28px; }
@@ -218,6 +234,7 @@
       .phone { width: 220px; }
       .grid, .steps { grid-template-columns: 1fr 1fr; }
       .card.big { grid-column: span 2; }
+      .music { grid-template-columns: 1fr; gap: 36px; }
       .nav-links { display: none; }
       .nav .btn { margin-left: auto; }
     }
@@ -261,6 +278,7 @@
       <a class="brand" href="#"><svg><use href="#logo" /></svg>AdFree Tube</a>
       <div class="nav-links">
         <a href="#features">Features</a>
+        <a href="#music">Music</a>
         <a href="#compare">Compare</a>
         <a href="#screens">Screens</a>
         <a href="#install">Install</a>
@@ -277,7 +295,7 @@
       <div class="hero-copy">
         <span class="pill"><b>FREE</b> <span class="js-version-pill">Latest version for Android</span></span>
         <h1>Every video.<br /><span class="grad-text">Zero ads.</span></h1>
-        <p class="lead">A fast, private video player with everything Premium gives you — background play, picture-in-picture and offline downloads — free, with no account and no tracking.</p>
+        <p class="lead">A fast, private video player with everything Premium gives you — background play, picture-in-picture, offline downloads and a music player with synced lyrics — free, with no account and no tracking.</p>
         <div class="cta">
           <a class="btn btn-primary btn-xl js-download" href="download/AdFree-Tube.apk">
             <svg style="width:26px;height:26px"><use href="#android" /></svg>
@@ -296,7 +314,7 @@
       <div class="phones" aria-hidden="true">
         <div class="glow"></div>
         <div class="phone p2"><img src="assets/screens/shorts.webp" alt="" loading="eager" /></div>
-        <div class="phone p3"><img src="assets/screens/subs.webp" alt="" loading="eager" /></div>
+        <div class="phone p3"><img src="assets/screens/music-player.webp" alt="" loading="eager" /></div>
         <div class="phone p1"><img src="assets/screens/watch.webp" alt="Watching a video in AdFree Tube" loading="eager" /></div>
       </div>
     </div>
@@ -339,7 +357,7 @@
           <div class="card reveal">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg></div>
             <h3>Offline downloads</h3>
-            <p>Save videos in up to 1080p, or just the audio, and watch on a plane, a train, or no signal at all.</p>
+            <p>Save videos in up to 1080p or just the audio, download whole playlists, or auto-download new uploads from chosen channels on Wi-Fi.</p>
           </div>
           <div class="card reveal">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9h18M3 15h18M9 3v18"/></svg></div>
@@ -376,7 +394,55 @@
             <h3>Sleep timer & more</h3>
             <p>Sleep timer, loop, playback speed, queue, chapters, captions and comments.</p>
           </div>
+          <div class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div>
+            <h3>"For you", built on your phone</h3>
+            <p>A Home feed picked from what you actually watch, worked out on your phone, so your viewing never leaves it.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h13M3 12h13M3 18h8M19 14v7M15.5 17.5h7"/></svg></div>
+            <h3>Library & playlists</h3>
+            <p>Make your own playlists from any video, then play all, shuffle or download the lot. History and Watch later live here too.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 15l3-3 2 2 3-4 2 3"/></svg></div>
+            <h3>No more clickbait<span class="tag">EXTRA</span></h3>
+            <p>DeArrow swaps shouty titles and arrow-filled thumbnails for honest titles and real frames from the video.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg></div>
+            <h3>Hide by keyword<span class="tag">EXTRA</span></h3>
+            <p>Never see videos about a show, game or topic you'd rather skip. Add the words and they're gone from every feed.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><path d="M7 15v3M11 11v7M15 13v5M19 8v10"/></svg></div>
+            <h3>Watch time & breaks<span class="tag">EXTRA</span></h3>
+            <p>See how long you watch each day and on which channels. Set a daily goal and get a gentle nudge to take a break.</p>
+          </div>
+          <div class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div>
+            <h3>Backup & restore</h3>
+            <p>Save your subscriptions, playlists, history and progress to one file, and bring it all back on a new phone.</p>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section id="music">
+      <div class="wrap music">
+        <div class="reveal">
+          <div class="eyebrow">Music</div>
+          <h2>A music player,<br />built right in.</h2>
+          <p class="section-lead">Open the Music tab and listen with the screen off — no video, no ads, and the words to every song.</p>
+          <ul class="ticks">
+            <li><svg><use href="#check" /></svg><span><b>Synced lyrics</b> that scroll with the song, in your language's script, with the current line shown in the player bar.</span></li>
+            <li><svg><use href="#check" /></svg><span><b>Your queue, your way</b> — reorder, remove or jump ahead, and add suggestions with a tap.</span></li>
+            <li><svg><use href="#check" /></svg><span><b>Offline songs</b> — save tracks and play them from the Downloaded shelf with no signal.</span></li>
+            <li><svg><use href="#check" /></svg><span><b>Sound controls</b> — speed from 0.75× to 1.25× with or without pitch change, plus equalizer presets.</span></li>
+            <li><svg><use href="#check" /></svg><span><b>Home screen widget</b> — artwork, play/pause and next, without opening the app.</span></li>
+          </ul>
+        </div>
+        <div class="music-shot reveal"><div class="glow"></div><div class="phone"><img src="assets/screens/lyrics.webp" alt="Synced lyrics in music mode" loading="lazy" /></div></div>
       </div>
     </section>
 
@@ -395,8 +461,10 @@
               <tr><td>Background play</td><td class="no">✕</td><td class="yes">✓</td><td class="us yes">✓</td></tr>
               <tr><td>Picture-in-picture</td><td class="no">✕</td><td class="yes">✓</td><td class="us yes">✓</td></tr>
               <tr><td>Offline downloads</td><td class="no">✕</td><td class="yes">✓</td><td class="us yes">✓</td></tr>
+              <tr><td>Music with screen off</td><td class="no">✕</td><td class="yes">✓</td><td class="us yes">✓</td></tr>
               <tr><td>Skip in-video sponsors</td><td class="no">✕</td><td class="no">✕</td><td class="us yes">✓</td></tr>
               <tr><td>See dislike counts</td><td class="no">✕</td><td class="no">✕</td><td class="us yes">✓</td></tr>
+              <tr><td>Honest titles, no clickbait</td><td class="no">✕</td><td class="no">✕</td><td class="us yes">✓</td></tr>
               <tr><td>Works without an account</td><td class="yes">✓</td><td class="no">✕</td><td class="us yes">✓</td></tr>
               <tr><td>No tracking</td><td class="no">✕</td><td class="no">✕</td><td class="us yes">✓</td></tr>
               <tr class="price"><td>Price</td><td>Free</td><td>Monthly fee</td><td class="us grad-text">Free</td></tr>
@@ -413,11 +481,13 @@
         <p class="section-lead">A familiar, polished dark design — just without the noise.</p>
       </div>
       <div class="screens reveal">
-        <figure class="shot"><div class="phone"><img src="assets/screens/home.webp" alt="Home feed" loading="lazy" /></div><p>Home</p></figure>
+        <figure class="shot"><div class="phone"><img src="assets/screens/home.webp" alt="Home feed with For you" loading="lazy" /></div><p>Home</p></figure>
         <figure class="shot"><div class="phone"><img src="assets/screens/watch.webp" alt="Watch page with chapters and comments" loading="lazy" /></div><p>Watch</p></figure>
         <figure class="shot"><div class="phone"><img src="assets/screens/pip.webp" alt="Floating player over the home feed" loading="lazy" /></div><p>Floating player</p></figure>
+        <figure class="shot"><div class="phone"><img src="assets/screens/music.webp" alt="Music tab with recently played and picks for you" loading="lazy" /></div><p>Music</p></figure>
+        <figure class="shot"><div class="phone"><img src="assets/screens/music-player.webp" alt="Music mode player" loading="lazy" /></div><p>Music mode</p></figure>
         <figure class="shot"><div class="phone"><img src="assets/screens/shorts.webp" alt="Shorts" loading="lazy" /></div><p>Shorts</p></figure>
-        <figure class="shot"><div class="phone"><img src="assets/screens/subs.webp" alt="Subscriptions feed" loading="lazy" /></div><p>Subscriptions</p></figure>
+        <figure class="shot"><div class="phone"><img src="assets/screens/library.webp" alt="Library with history, watch time and playlists" loading="lazy" /></div><p>Library</p></figure>
       </div>
     </section>
 
@@ -447,6 +517,7 @@
           <details><summary>Do I need an account?</summary><p>No. Everything works without signing in. Subscriptions, history and Watch later are saved privately on your phone. You can import your existing subscriptions from Google Takeout in a few taps.</p></details>
           <details><summary>Is it safe to install?</summary><p>The app is signed, has no ads or trackers, and asks only for the permissions it needs (notifications for upload alerts and the microphone for voice search, both optional). Android warns about any app installed outside the Play Store — that's expected.</p></details>
           <details><summary>How do I update?</summary><p>When a new version is released, the app shows an "update available" banner. Tap it (or come back to this page) and install the new APK over the old one — your data stays.</p></details>
+          <details><summary>Can I move my data to a new phone?</summary><p>Yes. Go to Library → Backup and save everything (subscriptions, playlists, history, watch progress) to a file. On the new phone, install AdFree Tube and restore from that file.</p></details>
           <details><summary>Is there an iPhone version?</summary><p>Not yet — AdFree Tube is Android-only for now.</p></details>
           <details><summary>Why isn't it on the Play Store?</summary><p>Ad-free players like this aren't allowed on the Play Store, so it's distributed directly from this page, like other open video apps.</p></details>
         </div>
@@ -464,6 +535,7 @@
             <span class="txt"><span class="sub">Download for Android</span><span class="main js-size">Get the APK</span></span>
           </a>
         </div>
+        <p class="whats-new js-notes"></p>
       </div>
     </div>
   </main>
@@ -496,6 +568,13 @@
           document.querySelectorAll('.js-size').forEach(function (el) { el.textContent = 'v' + version + (cfg.apkSize ? ' · ' + mb(cfg.apkSize) : ''); });
           var u = document.querySelector('.js-updated');
           if (u && cfg.releasedAt) u.textContent = 'Updated ' + ago(cfg.releasedAt);
+          var n = document.querySelector('.js-notes');
+          if (n && cfg.latestNotes) {
+            var b = document.createElement('b');
+            b.textContent = "What's new in " + version + ': ';
+            n.append(b, cfg.latestNotes);
+            n.classList.add('on');
+          }
         })
         .catch(function () { /* keep the static text */ });
 
