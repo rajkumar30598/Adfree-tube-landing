@@ -266,7 +266,7 @@
         <a href="#install">Install</a>
         <a href="#faq">FAQ</a>
       </div>
-      <a class="btn btn-primary js-download" href="https://github.com/rajkumar30598/Adfree-tube-landing/releases/latest/download/AdFree-Tube.apk">
+      <a class="btn btn-primary js-download" href="download/AdFree-Tube.apk">
         <svg><use href="#android" /></svg>Download
       </a>
     </div>
@@ -279,7 +279,7 @@
         <h1>Every video.<br /><span class="grad-text">Zero ads.</span></h1>
         <p class="lead">A fast, private video player with everything Premium gives you — background play, picture-in-picture and offline downloads — free, with no account and no tracking.</p>
         <div class="cta">
-          <a class="btn btn-primary btn-xl js-download" href="https://github.com/rajkumar30598/Adfree-tube-landing/releases/latest/download/AdFree-Tube.apk">
+          <a class="btn btn-primary btn-xl js-download" href="download/AdFree-Tube.apk">
             <svg style="width:26px;height:26px"><use href="#android" /></svg>
             <span class="txt"><span class="sub">Download for Android</span><span class="main js-size">Get the APK</span></span>
           </a>
@@ -459,12 +459,11 @@
         <h2>Watch without the wait.</h2>
         <p class="section-lead">Free, private and ad-free. Download AdFree Tube for Android.</p>
         <div class="cta">
-          <a class="btn btn-primary btn-xl js-download" href="https://github.com/rajkumar30598/Adfree-tube-landing/releases/latest/download/AdFree-Tube.apk">
+          <a class="btn btn-primary btn-xl js-download" href="download/AdFree-Tube.apk">
             <svg style="width:26px;height:26px"><use href="#android" /></svg>
             <span class="txt"><span class="sub">Download for Android</span><span class="main js-size">Get the APK</span></span>
           </a>
         </div>
-        <p class="meta" style="justify-content:center"><a href="https://github.com/rajkumar30598/Adfree-tube-landing/releases" style="text-decoration:underline">All versions & release notes</a></p>
       </div>
     </div>
   </main>
@@ -473,14 +472,13 @@
     <div class="wrap">
       <div class="brand" style="color:var(--text)"><svg><use href="#logo" /></svg>AdFree Tube</div>
       <p class="disclaimer">AdFree Tube is an independent project. It is not affiliated with, endorsed by or sponsored by YouTube or Google. All videos, thumbnails and trademarks belong to their respective owners.</p>
-      <div style="display:flex;gap:20px"><a href="https://github.com/rajkumar30598/Adfree-tube-landing/releases">Releases</a><a href="#faq">FAQ</a></div>
+      <div style="display:flex;gap:20px"><a href="#faq">FAQ</a></div>
     </div>
   </footer>
 
   <script>
-    // Live release info: version, file size and date of the newest APK.
+    // Live release info (version, size, date) from remote-config.json, updated by the release script.
     (function () {
-      var REPO = 'rajkumar30598/Adfree-tube-landing';
       if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) document.body.classList.add('is-ios');
 
       function mb(bytes) { return (bytes / 1048576).toFixed(1) + ' MB'; }
@@ -489,21 +487,17 @@
         return d <= 0 ? 'today' : d === 1 ? 'yesterday' : d + ' days ago';
       }
 
-      fetch('https://api.github.com/repos/' + REPO + '/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
+      fetch('remote-config.json', { cache: 'no-store' })
         .then(function (r) { return r.ok ? r.json() : null; })
-        .then(function (rel) {
-          if (!rel) return;
-          var apk = (rel.assets || []).filter(function (a) { return /\.apk$/i.test(a.name); })[0];
-          var version = (rel.tag_name || '').replace(/^v/, '');
+        .then(function (cfg) {
+          if (!cfg || !cfg.latestVersion) return;
+          var version = cfg.latestVersion;
           document.querySelectorAll('.js-version-pill').forEach(function (el) { el.textContent = 'Version ' + version + ' is out'; });
-          if (apk) {
-            document.querySelectorAll('.js-size').forEach(function (el) { el.textContent = 'v' + version + ' · ' + mb(apk.size); });
-            document.querySelectorAll('.js-download').forEach(function (el) { el.href = apk.browser_download_url; });
-          }
+          document.querySelectorAll('.js-size').forEach(function (el) { el.textContent = 'v' + version + (cfg.apkSize ? ' · ' + mb(cfg.apkSize) : ''); });
           var u = document.querySelector('.js-updated');
-          if (u) u.textContent = 'Updated ' + ago(rel.published_at);
+          if (u && cfg.releasedAt) u.textContent = 'Updated ' + ago(cfg.releasedAt);
         })
-        .catch(function () { /* keep the static /latest/download link */ });
+        .catch(function () { /* keep the static text */ });
 
       // Fade sections in as they scroll into view.
       var els = document.querySelectorAll('.reveal');
