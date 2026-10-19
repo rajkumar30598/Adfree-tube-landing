@@ -34,8 +34,8 @@
   ],
   "minVersion": "1.0.0",
   "updateUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/latest/download/AdFree-Tube.apk",
-  "latestVersion": "1.5.0",
-  "latestNotes": "Smoother playback and bug fixes. Adds anonymous usage stats to help improve the app — no ads, no ad tracking.",
-  "apkSize": 56719063,
-  "releasedAt": "2026-10-18T16:37:42.260Z"
+  "latestVersion": "1.5.1",
+  "latestNotes": "Fixed videos that played only audio, Shorts now play in HD, more accurate lyrics, and tap Home/Shorts to jump to the top (double-tap to refresh).",
+  "apkSize": 56728235,
+  "releasedAt": "2026-10-19T04:46:56.561Z"
 }
