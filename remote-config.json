@@ -34,8 +34,8 @@
   ],
   "minVersion": "1.0.0",
   "updateUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/latest/download/AdFree-Tube.apk",
-  "latestVersion": "1.7.0",
-  "latestNotes": "Sharper thumbnails across the app, picture-in-picture for Shorts, live download speed and data used in Settings → Network, and a new Library icon. Data saver now also loads smaller thumbnails.",
-  "apkSize": 59298925,
-  "releasedAt": "2026-10-20T11:20:19.006Z"
+  "latestVersion": "1.7.1",
+  "latestNotes": "Smoother seek bars in Music, videos and Shorts. Song mode shows the full thumbnail. Swipe right in History to remove a video. New-upload notifications are now on by default.",
+  "apkSize": 59327845,
+  "releasedAt": "2026-10-20T16:07:07.631Z"
 }
