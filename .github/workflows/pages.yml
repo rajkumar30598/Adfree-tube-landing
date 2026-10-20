@@ -1,0 +1,58 @@
+# Deploys the landing page with the APK served from GitHub Pages itself.
+#
+# Release asset downloads redirect to release-assets.githubusercontent.com, and one of its IPs
+# is unreachable on some networks, so roughly 1 in 4 downloads stalled or failed. Pages is
+# served from different addresses, so the APK is copied here at build time (never committed).
+#
+# Published files:
+#   AdFree-Tube.apk              newest release
+#   AdFree-Tube-<version>.apk    newest two releases (the page links to the versioned one from
+#                                remote-config.json; the previous one covers a cached config)
+name: Deploy Pages
+
+on:
+  push:
+    branches: [main]
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir _site
+          rsync -a --exclude .git --exclude .github --exclude _site ./ _site/
+          tags=$(gh release list --repo "$GITHUB_REPOSITORY" --exclude-drafts --exclude-pre-releases --limit 2 --json tagName --jq '.[].tagName')
+          [ -n "$tags" ] || { echo "No releases found"; exit 1; }
+          first=1
+          for tag in $tags; do
+            gh release download "$tag" --repo "$GITHUB_REPOSITORY" --pattern AdFree-Tube.apk --output "_site/AdFree-Tube-${tag#v}.apk"
+            if [ $first = 1 ]; then cp "_site/AdFree-Tube-${tag#v}.apk" _site/AdFree-Tube.apk; first=0; fi
+          done
+          ls -la _site
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

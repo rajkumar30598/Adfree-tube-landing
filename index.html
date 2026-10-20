@@ -220,6 +220,12 @@
 
     .ios-note { display: none; margin-top: 14px; font-size: 14px; color: #fbbf24; }
     .is-ios .ios-note { display: block; }
+    .inapp-note { display: none; margin-top: 14px; font-size: 14px; color: #fbbf24; }
+    .inapp-note a { color: inherit; font-weight: 700; text-decoration: underline; }
+    .is-inapp .inapp-note { display: block; }
+    .alt-dl { margin-top: 10px; font-size: 13px; color: var(--faint); }
+    .alt-dl a { color: var(--dim); text-decoration: underline; }
+    .is-ios .alt-dl { display: none; }
 
     .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
     .reveal.in { opacity: 1; transform: none; }
@@ -284,7 +290,7 @@
         <a href="#install">Install</a>
         <a href="#faq">FAQ</a>
       </div>
-      <a class="btn btn-primary js-download" href="https://github.com/rajkumar30598/Adfree-tube-landing/releases/latest/download/AdFree-Tube.apk">
+      <a class="btn btn-primary js-download" href="AdFree-Tube.apk" download>
         <svg><use href="#android" /></svg>Download
       </a>
     </div>
@@ -297,7 +303,7 @@
         <h1>Every video.<br /><span class="grad-text">Zero ads.</span></h1>
         <p class="lead">A fast, private video player with everything Premium gives you — background play, picture-in-picture, offline downloads and a music player with synced lyrics — free, with no account and no tracking.</p>
         <div class="cta">
-          <a class="btn btn-primary btn-xl js-download" href="https://github.com/rajkumar30598/Adfree-tube-landing/releases/latest/download/AdFree-Tube.apk">
+          <a class="btn btn-primary btn-xl js-download" href="AdFree-Tube.apk" download>
             <svg style="width:26px;height:26px"><use href="#android" /></svg>
             <span class="txt"><span class="sub">Download for Android</span><span class="main js-size">Get the APK</span></span>
           </a>
@@ -310,6 +316,8 @@
           <span class="js-updated"></span>
         </div>
         <p class="ios-note">You're on an iPhone — AdFree Tube is Android-only for now.</p>
+        <p class="inapp-note">Download not starting? This app's built-in browser can't save APKs. <a class="js-open-chrome" href="#">Open this page in Chrome</a> (or tap ⋮ → Open in browser).</p>
+        <p class="alt-dl">Trouble downloading? <a href="https://github.com/rajkumar30598/Adfree-tube-landing/releases/latest">Get it from GitHub</a></p>
       </div>
       <div class="phones" aria-hidden="true">
         <div class="glow"></div>
@@ -530,7 +538,7 @@
         <h2>Watch without the wait.</h2>
         <p class="section-lead">Free, private and ad-free. Download AdFree Tube for Android.</p>
         <div class="cta">
-          <a class="btn btn-primary btn-xl js-download" href="https://github.com/rajkumar30598/Adfree-tube-landing/releases/latest/download/AdFree-Tube.apk">
+          <a class="btn btn-primary btn-xl js-download" href="AdFree-Tube.apk" download>
             <svg style="width:26px;height:26px"><use href="#android" /></svg>
             <span class="txt"><span class="sub">Download for Android</span><span class="main js-size">Get the APK</span></span>
           </a>
@@ -552,7 +560,17 @@
   <script>
     // Live release info (version, size, date) from remote-config.json, updated by the release script.
     (function () {
-      if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) document.body.classList.add('is-ios');
+      var ua = navigator.userAgent;
+      if (/iPhone|iPad|iPod/i.test(ua)) document.body.classList.add('is-ios');
+      // In-app browsers (Instagram, Facebook, Telegram… and Android WebViews generally) often can't
+      // download an APK. Point people to Chrome, with a link that opens this page there.
+      else if (/; wv\)|FBAN|FBAV|Instagram|Line\/|Snapchat|LinkedInApp|Telegram/i.test(ua)) {
+        document.body.classList.add('is-inapp');
+        var page = location.host + location.pathname;
+        document.querySelectorAll('.js-open-chrome').forEach(function (el) {
+          el.href = 'intent://' + page + '#Intent;scheme=https;package=com.android.chrome;end';
+        });
+      }
 
       function mb(bytes) { return (bytes / 1048576).toFixed(1) + ' MB'; }
       function ago(date) {
@@ -565,8 +583,9 @@
         .then(function (cfg) {
           if (!cfg || !cfg.latestVersion) return;
           var version = cfg.latestVersion;
-          // Link straight to this version's APK: browsers can cache the /latest/ redirect and serve an old build.
-          var apk = 'https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v' + version + '/AdFree-Tube.apk';
+          // Link straight to this version's APK (served from this site, see .github/workflows/pages.yml)
+          // so a cached copy of AdFree-Tube.apk can never hand out an old build.
+          var apk = 'AdFree-Tube-' + version + '.apk';
           document.querySelectorAll('.js-download').forEach(function (el) { el.href = apk; });
           document.querySelectorAll('.js-version-pill').forEach(function (el) { el.textContent = 'Version ' + version + ' is out'; });
           document.querySelectorAll('.js-size').forEach(function (el) { el.textContent = 'v' + version + (cfg.apkSize ? ' · ' + mb(cfg.apkSize) : ''); });
