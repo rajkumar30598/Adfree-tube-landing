@@ -4,10 +4,9 @@
 # is unreachable on some networks, so roughly 1 in 4 downloads stalled or failed. Pages is
 # served from different addresses, so the APK is copied here at build time (never committed).
 #
-# Published files:
-#   AdFree-Tube.apk              newest release
-#   AdFree-Tube-<version>.apk    newest two releases (the page links to the versioned one from
-#                                remote-config.json; the previous one covers a cached config)
+# Only the newest release is published, as AdFree-Tube.apk; each deploy replaces the whole site,
+# so the previous APK is gone. Every version stays on GitHub Releases. Links add ?v=<version>
+# so browsers don't reuse a cached older copy.
 name: Deploy Pages
 
 on:
@@ -41,14 +40,10 @@ jobs:
         run: |
           mkdir _site
           rsync -a --exclude .git --exclude .github --exclude _site ./ _site/
-          tags=$(gh release list --repo "$GITHUB_REPOSITORY" --exclude-drafts --exclude-pre-releases --limit 2 --json tagName --jq '.[].tagName')
-          [ -n "$tags" ] || { echo "No releases found"; exit 1; }
-          first=1
-          for tag in $tags; do
-            gh release download "$tag" --repo "$GITHUB_REPOSITORY" --pattern AdFree-Tube.apk --output "_site/AdFree-Tube-${tag#v}.apk"
-            if [ $first = 1 ]; then cp "_site/AdFree-Tube-${tag#v}.apk" _site/AdFree-Tube.apk; first=0; fi
-          done
-          ls -la _site
+          tag=$(gh release list --repo "$GITHUB_REPOSITORY" --exclude-drafts --exclude-pre-releases --limit 1 --json tagName --jq '.[0].tagName')
+          [ -n "$tag" ] || { echo "No releases found"; exit 1; }
+          gh release download "$tag" --repo "$GITHUB_REPOSITORY" --pattern AdFree-Tube.apk --output _site/AdFree-Tube.apk
+          echo "Serving $tag"; ls -la _site
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

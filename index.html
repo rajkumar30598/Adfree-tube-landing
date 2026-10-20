@@ -583,9 +583,9 @@
         .then(function (cfg) {
           if (!cfg || !cfg.latestVersion) return;
           var version = cfg.latestVersion;
-          // Link straight to this version's APK (served from this site, see .github/workflows/pages.yml)
-          // so a cached copy of AdFree-Tube.apk can never hand out an old build.
-          var apk = 'AdFree-Tube-' + version + '.apk';
+          // The newest APK is served from this site (see .github/workflows/pages.yml); the version
+          // in the URL stops browsers from handing out a cached older copy.
+          var apk = 'AdFree-Tube.apk?v=' + version;
           document.querySelectorAll('.js-download').forEach(function (el) { el.href = apk; });
           document.querySelectorAll('.js-version-pill').forEach(function (el) { el.textContent = 'Version ' + version + ' is out'; });
           document.querySelectorAll('.js-size').forEach(function (el) { el.textContent = 'v' + version + (cfg.apkSize ? ' · ' + mb(cfg.apkSize) : ''); });
