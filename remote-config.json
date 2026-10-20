@@ -34,8 +34,8 @@
   ],
   "minVersion": "1.0.0",
   "updateUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/latest/download/AdFree-Tube.apk",
-  "latestVersion": "1.6.0",
-  "latestNotes": "Videos from Home and search always play as video. New Song / Video switch in the music player. Shorts now show up in search. Previous button on the video player. New app and creator cards in Library.",
-  "apkSize": 56781795,
-  "releasedAt": "2026-10-20T05:23:35.915Z"
+  "latestVersion": "1.6.1",
+  "latestNotes": "Shorts load faster and you can drag the progress bar. Search has All / Videos / Shorts / Channels / Playlists tabs, and back returns to your results. Previous and next in the notification and lock screen. Loading spinner on play buttons. Music tab shows an equaliser while songs play. Fun reminders through the day. Comments close with a swipe down.",
+  "apkSize": 56812123,
+  "releasedAt": "2026-10-20T08:23:25.163Z"
 }
