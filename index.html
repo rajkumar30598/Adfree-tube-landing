@@ -565,6 +565,9 @@
         .then(function (cfg) {
           if (!cfg || !cfg.latestVersion) return;
           var version = cfg.latestVersion;
+          // Link straight to this version's APK: browsers can cache the /latest/ redirect and serve an old build.
+          var apk = 'https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v' + version + '/AdFree-Tube.apk';
+          document.querySelectorAll('.js-download').forEach(function (el) { el.href = apk; });
           document.querySelectorAll('.js-version-pill').forEach(function (el) { el.textContent = 'Version ' + version + ' is out'; });
           document.querySelectorAll('.js-size').forEach(function (el) { el.textContent = 'v' + version + (cfg.apkSize ? ' · ' + mb(cfg.apkSize) : ''); });
           var u = document.querySelector('.js-updated');
