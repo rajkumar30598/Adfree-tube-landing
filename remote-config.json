@@ -34,8 +34,8 @@
   ],
   "minVersion": "1.0.0",
   "updateUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/latest/download/AdFree-Tube.apk",
-  "latestVersion": "1.6.1",
-  "latestNotes": "Shorts load faster and you can drag the progress bar. Search has All / Videos / Shorts / Channels / Playlists tabs, and back returns to your results. Previous and next in the notification and lock screen. Loading spinner on play buttons. Music tab shows an equaliser while songs play. Fun reminders through the day. Comments close with a swipe down.",
-  "apkSize": 56812123,
-  "releasedAt": "2026-10-20T08:23:25.163Z"
+  "latestVersion": "1.6.2",
+  "latestNotes": "YouTube links and shares open in AdFree Tube. Videos recover by themselves after a long pause. Sleep timer works with the screen off, now up to 2 hours. Clickable timestamps and links in descriptions and comments. History: Videos / Music / Shorts filters and search. Rename and reorder playlists. New dialogs. 70+ languages with a None option. Many reliability fixes: no endless loading, safer saved data, retry buttons, offline screen, crash fixes.",
+  "apkSize": 59294165,
+  "releasedAt": "2026-10-20T10:08:06.748Z"
 }
