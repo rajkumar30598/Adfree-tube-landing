@@ -33,9 +33,9 @@
     "https://pipedapi.adminforge.de"
   ],
   "minVersion": "1.0.0",
-  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.7.1",
-  "latestVersion": "1.7.1",
-  "latestNotes": "Smoother seek bars in Music, videos and Shorts. Song mode shows the full thumbnail. Swipe right in History to remove a video. New-upload notifications are now on by default.",
-  "apkSize": 59327845,
-  "releasedAt": "2026-10-20T16:07:07.631Z"
+  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.7.2",
+  "latestVersion": "1.7.2",
+  "latestNotes": "Playback speed is now a simple tap-to-pick list. Swiping a video out of History is smoother. Cleaner Clear all button in Search.",
+  "apkSize": 59319857,
+  "releasedAt": "2026-10-21T05:10:14.367Z"
 }
