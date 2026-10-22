@@ -33,9 +33,9 @@
     "https://pipedapi.adminforge.de"
   ],
   "minVersion": "1.0.0",
-  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.7.3",
-  "latestVersion": "1.7.3",
-  "latestNotes": "Better landscape mode: the music player shows artwork and controls side by side, screens stay clear of the camera cutout, Shorts show the whole video, and song lists use two columns.",
-  "apkSize": 59321257,
-  "releasedAt": "2026-10-22T05:09:40.251Z"
+  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.8.0",
+  "latestVersion": "1.8.0",
+  "latestNotes": "Music keeps playing with the screen locked and picks up again after calls and alarms; it pauses when headphones come out. Hold any video or Short for 2x speed. Light theme (Settings → Appearance). Swipe for brightness and volume in fullscreen, and a fullscreen lock. Skip silence, default speed, double-tap skip time, hide Shorts or watched videos. Search in Settings. A cleaner music player with 15-second skip, a scrolling title and Up next. Downloads show storage with one-tap clean-up. Smoother scrolling and lower data use.",
+  "apkSize": 59378509,
+  "releasedAt": "2026-10-22T17:33:20.664Z"
 }
