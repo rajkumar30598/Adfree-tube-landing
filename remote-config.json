@@ -33,9 +33,9 @@
     "https://pipedapi.adminforge.de"
   ],
   "minVersion": "1.0.0",
-  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.9.2",
-  "latestVersion": "1.9.2",
-  "latestNotes": "Fullscreen no longer turns upright when you re-enter it quickly, and leaving fullscreen is a smooth fade instead of a zoom.",
-  "apkSize": 60174629,
-  "releasedAt": "2026-10-22T19:29:38.682Z"
+  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.9.3",
+  "latestVersion": "1.9.3",
+  "latestNotes": "Fullscreen now switches instantly with no black screen in between. Smaller fullscreen buttons and a camera icon for screenshots.",
+  "apkSize": 59402633,
+  "releasedAt": "2026-10-22T20:05:21.351Z"
 }
