@@ -33,9 +33,9 @@
     "https://pipedapi.adminforge.de"
   ],
   "minVersion": "1.0.0",
-  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.7.2",
-  "latestVersion": "1.7.2",
-  "latestNotes": "Playback speed is now a simple tap-to-pick list. Swiping a video out of History is smoother. Cleaner Clear all button in Search.",
-  "apkSize": 59319857,
-  "releasedAt": "2026-10-21T05:10:14.367Z"
+  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.7.3",
+  "latestVersion": "1.7.3",
+  "latestNotes": "Better landscape mode: the music player shows artwork and controls side by side, screens stay clear of the camera cutout, Shorts show the whole video, and song lists use two columns.",
+  "apkSize": 59321257,
+  "releasedAt": "2026-10-22T05:09:40.251Z"
 }
