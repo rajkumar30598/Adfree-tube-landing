@@ -33,9 +33,9 @@
     "https://pipedapi.adminforge.de"
   ],
   "minVersion": "1.0.0",
-  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.9.0",
-  "latestVersion": "1.9.0",
-  "latestNotes": "Fullscreen gets fit/fill/stretch zoom, swipe to seek, a clock and battery, screenshots and a quick speed picker. Swipe up in fullscreen for more videos. Brightness and volume show a percentage, and bottom sheets drag more smoothly.",
-  "apkSize": 60173013,
-  "releasedAt": "2026-10-22T18:43:11.674Z"
+  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.9.1",
+  "latestVersion": "1.9.1",
+  "latestNotes": "In fullscreen, More videos now slides up with your finger. Zoom is set from the zoom button only (pinch removed). Fixes a duplicate \"Default\" entry in the audio track list.",
+  "apkSize": 60173757,
+  "releasedAt": "2026-10-22T19:10:30.678Z"
 }
