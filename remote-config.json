@@ -33,9 +33,9 @@
     "https://pipedapi.adminforge.de"
   ],
   "minVersion": "1.0.0",
-  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.9.3",
-  "latestVersion": "1.9.3",
-  "latestNotes": "Fullscreen now switches instantly with no black screen in between. Smaller fullscreen buttons and a camera icon for screenshots.",
-  "apkSize": 59402633,
-  "releasedAt": "2026-10-22T20:05:21.351Z"
+  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.9.4",
+  "latestVersion": "1.9.4",
+  "latestNotes": "Smart notifications: pick up videos you left half-way, keep your watch streak, a weekly recap, Watch later reminders, a song of the day and downloads-ready alerts (each can be switched off in Settings). Fun reminders every three hours with new jokes that don't repeat. Music tab remembers your recent searches. In landscape, settings open on the right like YouTube. Skip silence in playback settings.",
+  "apkSize": 59426777,
+  "releasedAt": "2026-10-23T15:36:39.072Z"
 }
