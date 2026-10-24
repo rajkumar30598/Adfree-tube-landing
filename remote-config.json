@@ -35,13 +35,13 @@
   "minVersion": "1.0.0",
   "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.10.0",
   "latestVersion": "1.10.0",
-  "latestNotes": "Now on Android TV: a TV version with a side menu, rows of videos, remote controls, voice search and a seekable progress bar (AdFree-Tube-TV.apk). Music tab shows songs only. Smoother scrolling at the end of lists. Usage stats now use a random install ID (no device or account ID).",
-  "apkSize": 59558013,
+  "latestNotes": "Now on Android TV: a TV version with a side menu, rows of videos, remote controls, voice search and a seekable progress bar (the same APK installs on TVs). Music tab shows songs only. Smoother scrolling at the end of lists. Usage stats now use a random install ID (no device or account ID).",
+  "apkSize": 59602221,
   "releasedAt": "2026-10-24T13:34:23.149Z",
   "tv": {
     "latestVersion": "1.10.0",
-    "latestNotes": "Now on Android TV: a TV version with a side menu, rows of videos, remote controls, voice search and a seekable progress bar (AdFree-Tube-TV.apk). Music tab shows songs only. Smoother scrolling at the end of lists. Usage stats now use a random install ID (no device or account ID).",
-    "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube-TV.apk?v=1.10.0",
+    "latestNotes": "Now on Android TV: a TV version with a side menu, rows of videos, remote controls, voice search and a seekable progress bar (the same APK installs on TVs). Music tab shows songs only. Smoother scrolling at the end of lists. Usage stats now use a random install ID (no device or account ID).",
+    "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.10.0",
     "apkSize": 59602221,
     "releasedAt": "2026-10-24T13:34:23.149Z"
   }

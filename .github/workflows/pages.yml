@@ -4,7 +4,7 @@
 # is unreachable on some networks, so roughly 1 in 4 downloads stalled or failed. Pages is
 # served from different addresses, so the APK is copied here at build time (never committed).
 #
-# Only the newest release is published, as AdFree-Tube.apk (and AdFree-Tube-TV.apk for TVs); each deploy replaces the whole site,
+# Only the newest release is published, as AdFree-Tube.apk (one APK for phones and TVs); each deploy replaces the whole site,
 # so the previous APK is gone. Every version stays on GitHub Releases. Links add ?v=<version>
 # so browsers don't reuse a cached older copy.
 name: Deploy Pages
@@ -43,8 +43,6 @@ jobs:
           tag=$(gh release list --repo "$GITHUB_REPOSITORY" --exclude-drafts --exclude-pre-releases --limit 1 --json tagName --jq '.[0].tagName')
           [ -n "$tag" ] || { echo "No releases found"; exit 1; }
           gh release download "$tag" --repo "$GITHUB_REPOSITORY" --pattern AdFree-Tube.apk --output _site/AdFree-Tube.apk
-          # Android TV build (releases before 1.10 don't have one).
-          gh release download "$tag" --repo "$GITHUB_REPOSITORY" --pattern AdFree-Tube-TV.apk --output _site/AdFree-Tube-TV.apk || echo "No TV APK in $tag"
           echo "Serving $tag"; ls -la _site
 
       - uses: actions/configure-pages@v5

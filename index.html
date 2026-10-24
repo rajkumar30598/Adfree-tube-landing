@@ -62,7 +62,6 @@
     .brand svg { width: 28px; height: 28px; }
     .nav-links { display: flex; gap: 22px; margin-left: auto; font-size: 14.5px; color: var(--dim); font-weight: 500; }
     .nav-links a:hover { color: var(--text); }
-    .btn[hidden] { display: none; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 10px;
       height: 44px; padding: 0 20px; border-radius: 999px; font-weight: 700; font-size: 15px;
@@ -306,11 +305,7 @@
         <div class="cta">
           <a class="btn btn-primary btn-xl js-download" href="AdFree-Tube.apk" download>
             <svg style="width:26px;height:26px"><use href="#android" /></svg>
-            <span class="txt"><span class="sub">Download for Android</span><span class="main js-size">Get the APK</span></span>
-          </a>
-          <a class="btn btn-ghost btn-xl js-download-tv" href="AdFree-Tube-TV.apk" download hidden>
-            <svg viewBox="0 0 24 24" style="width:26px;height:26px" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2" /><path d="M8 21h8M12 17v4" /></svg>
-            <span class="txt"><span class="sub">Download for Android TV</span><span class="main js-size-tv">Get the TV APK</span></span>
+            <span class="txt"><span class="sub">Download for Android &amp; TV</span><span class="main js-size">Get the APK</span></span>
           </a>
           <a class="btn btn-ghost btn-xl" href="#features">See features</a>
         </div>
@@ -531,7 +526,7 @@
           <details><summary>Is it safe to install?</summary><p>The app is signed, has no ads or ad trackers, collects only usage stats and crash reports (Firebase — tied to a random ID made for your install, never a device, advertising or account ID; no search terms, watched videos or account details), and asks only for the permissions it needs (notifications for upload alerts and the microphone for voice search, both optional). Android warns about any app installed outside the Play Store — that's expected.</p></details>
           <details><summary>How do I update?</summary><p>When a new version is released, the app shows an "update available" banner. Tap it (or come back to this page) and install the new APK over the old one — your data stays.</p></details>
           <details><summary>Can I move my data to a new phone?</summary><p>Yes. Go to Library → Backup and save everything (subscriptions, playlists, history, watch progress) to a file. On the new phone, install AdFree Tube and restore from that file.</p></details>
-          <details><summary>Does it work on Android TV?</summary><p>Yes — there's a version made for the big screen, with a side menu, rows of videos, remote-friendly controls and voice search. It runs on Android TV, Google TV and Fire TV. Download <b>AdFree-Tube-TV.apk</b> above on your TV's browser, or send it to the TV with an app like <b>Send Files to TV</b>, then open it to install (allow installing from that app if the TV asks).</p></details>
+          <details><summary>Does it work on Android TV?</summary><p>Yes — there's a version made for the big screen, with a side menu, rows of videos, remote-friendly controls and voice search. It runs on Android TV, Google TV and Fire TV. It's the same APK as for phones — the app switches to its TV layout on a TV. Open this page in your TV's browser and download it, or send the APK to the TV with an app like <b>Send Files to TV</b>, then open it to install (allow installing from that app if the TV asks).</p></details>
           <details><summary>Is there an iPhone version?</summary><p>Not yet — AdFree Tube is Android-only for now.</p></details>
           <details><summary>Why isn't it on the Play Store?</summary><p>Ad-free players like this aren't allowed on the Play Store, so it's distributed directly from this page, like other open video apps.</p></details>
         </div>
@@ -542,15 +537,11 @@
       <div class="final reveal">
         <svg style="width:64px;height:64px;margin:0 auto"><use href="#logo" /></svg>
         <h2>Watch without the wait.</h2>
-        <p class="section-lead">Free, private and ad-free. Download AdFree Tube for Android.</p>
+        <p class="section-lead">Free, private and ad-free. Download AdFree Tube for Android phones and TVs.</p>
         <div class="cta">
           <a class="btn btn-primary btn-xl js-download" href="AdFree-Tube.apk" download>
             <svg style="width:26px;height:26px"><use href="#android" /></svg>
-            <span class="txt"><span class="sub">Download for Android</span><span class="main js-size">Get the APK</span></span>
-          </a>
-          <a class="btn btn-ghost btn-xl js-download-tv" href="AdFree-Tube-TV.apk" download hidden>
-            <svg viewBox="0 0 24 24" style="width:26px;height:26px" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2" /><path d="M8 21h8M12 17v4" /></svg>
-            <span class="txt"><span class="sub">Download for Android TV</span><span class="main js-size-tv">Get the TV APK</span></span>
+            <span class="txt"><span class="sub">Download for Android &amp; TV</span><span class="main js-size">Get the APK</span></span>
           </a>
         </div>
         <p class="whats-new js-notes"></p>
@@ -599,15 +590,6 @@
           document.querySelectorAll('.js-download').forEach(function (el) { el.href = apk; });
           document.querySelectorAll('.js-version-pill').forEach(function (el) { el.textContent = 'Version ' + version + ' is out'; });
           document.querySelectorAll('.js-size').forEach(function (el) { el.textContent = 'v' + version + (cfg.apkSize ? ' · ' + mb(cfg.apkSize) : ''); });
-          // The Android TV build (see .github/workflows/pages.yml), shown once a release has one.
-          if (cfg.tv && cfg.tv.latestVersion) {
-            var tv = cfg.tv;
-            document.querySelectorAll('.js-download-tv').forEach(function (el) {
-              el.href = 'AdFree-Tube-TV.apk?v=' + tv.latestVersion;
-              el.hidden = false;
-            });
-            document.querySelectorAll('.js-size-tv').forEach(function (el) { el.textContent = 'v' + tv.latestVersion + (tv.apkSize ? ' · ' + mb(tv.apkSize) : ''); });
-          }
           var u = document.querySelector('.js-updated');
           if (u && cfg.releasedAt) u.textContent = 'Updated ' + ago(cfg.releasedAt);
           var n = document.querySelector('.js-notes');
