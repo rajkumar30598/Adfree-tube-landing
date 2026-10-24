@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rajkumar30598.github.io/Adfree-tube-landing/sitemap.xml

@@ -8,13 +8,34 @@
   <meta name="theme-color" content="#0b0b0c" />
   <meta property="og:title" content="AdFree Tube — Every video. Zero ads." />
   <meta property="og:description" content="No ads, background play, picture-in-picture, offline downloads and a music player with lyrics — on your phone and your TV. Free, private, no account." />
-  <meta property="og:image" content="assets/icon-512.png" />
+  <meta property="og:image" content="https://rajkumar30598.github.io/Adfree-tube-landing/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://rajkumar30598.github.io/Adfree-tube-landing/" />
   <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AdFree Tube — Every video. Zero ads." />
+  <meta name="twitter:image" content="https://rajkumar30598.github.io/Adfree-tube-landing/assets/og-image.png" />
+  <link rel="canonical" href="https://rajkumar30598.github.io/Adfree-tube-landing/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "AdFree Tube",
+    "operatingSystem": "Android, Android TV",
+    "applicationCategory": "MultimediaApplication",
+    "description": "A free, private video player for Android phones and Android TV with no ads, background play, picture-in-picture, offline downloads and a music player with synced lyrics.",
+    "url": "https://rajkumar30598.github.io/Adfree-tube-landing/",
+    "downloadUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk",
+    "image": "https://rajkumar30598.github.io/Adfree-tube-landing/assets/og-image.png",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+  }
+  </script>
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #0b0b0c;
@@ -184,6 +205,18 @@
     .shot p { color: var(--dim); font-size: 14px; margin: 14px 0 0; font-weight: 600; }
 
     /* ---------- install ---------- */
+    .steps-title { margin: 40px 0 16px; font-size: 18px; text-align: center; color: var(--text); }
+    code.url { font-family: ui-monospace, Menlo, monospace; font-size: 13px; color: var(--text); background: var(--card-2); border: 1px solid var(--line); padding: 2px 6px; border-radius: 6px; word-break: break-all; }
+    .qr-card { display: none; align-items: center; gap: 14px; margin-top: 18px; padding: 12px 16px 12px 12px; max-width: 360px; border: 1px solid var(--line); border-radius: 16px; background: var(--card); }
+    .qr-card img { width: 96px; height: 96px; padding: 6px; border-radius: 10px; background: #fff; flex: none; }
+    .qr-card p { margin: 0; font-size: 13.5px; color: var(--dim); }
+    .qr-card b { color: var(--text); }
+    @media (min-width: 900px) and (pointer: fine) { .qr-card { display: flex; } }
+    .timeline { max-width: 760px; margin: 0 auto; display: grid; gap: 14px; }
+    .rel { padding: 18px 22px; border: 1px solid var(--line); border-radius: 16px; background: var(--card); }
+    .rel h3 { margin: 0 0 6px; font-size: 16px; display: flex; gap: 10px; align-items: baseline; }
+    .rel h3 span { color: var(--faint); font-weight: 500; font-size: 13px; }
+    .rel p { margin: 0; color: var(--dim); font-size: 14.5px; }
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; counter-reset: s; }
     .step { position: relative; padding-top: 58px; }
     .step::before {
@@ -325,12 +358,16 @@
         <p class="ios-note">You're on an iPhone — AdFree Tube is Android-only for now.</p>
         <p class="inapp-note">Download not starting? This app's built-in browser can't save APKs. <a class="js-open-chrome" href="#">Open this page in Chrome</a> (or tap ⋮ → Open in browser).</p>
         <p class="alt-dl">Trouble downloading? <a href="https://github.com/rajkumar30598/Adfree-tube-landing/releases/latest">Get it from GitHub</a></p>
+        <div class="qr-card">
+          <img src="assets/qr.svg" width="96" height="96" alt="QR code for this page" />
+          <p><b>On a computer?</b><br />Scan with your phone's camera to open this page there and download.</p>
+        </div>
       </div>
       <div class="phones" aria-hidden="true">
         <div class="glow"></div>
-        <div class="phone p2"><img src="assets/screens/shorts.webp" alt="" loading="eager" /></div>
-        <div class="phone p3"><img src="assets/screens/music-player.webp" alt="" loading="eager" /></div>
-        <div class="phone p1"><img src="assets/screens/watch.webp" alt="Watching a video in AdFree Tube" loading="eager" /></div>
+        <div class="phone p2"><img src="assets/screens/shorts.webp" width="540" height="1200" alt="" loading="eager" /></div>
+        <div class="phone p3"><img src="assets/screens/music-player.webp" width="540" height="1200" alt="" loading="eager" /></div>
+        <div class="phone p1"><img src="assets/screens/watch.webp" width="540" height="1200" alt="Watching a video in AdFree Tube" loading="eager" fetchpriority="high" /></div>
       </div>
     </div>
     <div class="wrap">
@@ -450,7 +487,7 @@
           <h2>One app. Your phone<br />and your TV.</h2>
           <p class="section-lead">The same download runs on Android phones, tablets and TVs — on a TV it switches to a big-screen layout made for the remote.</p>
         </div>
-        <div class="tv-shot reveal"><div class="glow"></div><img src="assets/screens/tv-home.webp" alt="AdFree Tube on Android TV: side menu, a large preview and rows of videos" loading="lazy" /></div>
+        <div class="tv-shot reveal"><div class="glow"></div><img src="assets/screens/tv-home.webp" width="1280" height="720" alt="AdFree Tube on Android TV: side menu, a large preview and rows of videos" loading="lazy" /></div>
         <div class="grid two">
           <div class="card reveal">
             <h3>On your phone</h3>
@@ -486,7 +523,7 @@
             <li><svg><use href="#check" /></svg><span><b>Home screen widget</b> — artwork, play/pause and next, without opening the app.</span></li>
           </ul>
         </div>
-        <div class="music-shot reveal"><div class="glow"></div><div class="phone"><img src="assets/screens/lyrics.webp" alt="Synced lyrics in music mode" loading="lazy" /></div></div>
+        <div class="music-shot reveal"><div class="glow"></div><div class="phone"><img src="assets/screens/lyrics.webp" width="540" height="1200" alt="Synced lyrics in music mode" loading="lazy" /></div></div>
       </div>
     </section>
 
@@ -510,6 +547,7 @@
               <tr><td>See dislike counts</td><td class="no">✕</td><td class="no">✕</td><td class="us yes">✓</td></tr>
               <tr><td>Honest titles, no clickbait</td><td class="no">✕</td><td class="no">✕</td><td class="us yes">✓</td></tr>
               <tr><td>Works without an account</td><td class="yes">✓</td><td class="no">✕</td><td class="us yes">✓</td></tr>
+              <tr><td>Ad-free on your TV</td><td class="no">✕</td><td class="yes">✓</td><td class="us yes">✓</td></tr>
               <tr><td>No ad tracking</td><td class="no">✕</td><td class="no">✕</td><td class="us yes">✓</td></tr>
               <tr class="price"><td>Price</td><td>Free</td><td>Monthly fee</td><td class="us grad-text">Free</td></tr>
             </tbody>
@@ -525,13 +563,13 @@
         <p class="section-lead">A familiar, polished dark design — just without the noise.</p>
       </div>
       <div class="screens reveal">
-        <figure class="shot"><div class="phone"><img src="assets/screens/home.webp" alt="Home feed with For you" loading="lazy" /></div><p>Home</p></figure>
-        <figure class="shot"><div class="phone"><img src="assets/screens/watch.webp" alt="Watch page with chapters and comments" loading="lazy" /></div><p>Watch</p></figure>
-        <figure class="shot"><div class="phone"><img src="assets/screens/pip.webp" alt="Floating player over the home feed" loading="lazy" /></div><p>Floating player</p></figure>
-        <figure class="shot"><div class="phone"><img src="assets/screens/music.webp" alt="Music tab with recently played and picks for you" loading="lazy" /></div><p>Music</p></figure>
-        <figure class="shot"><div class="phone"><img src="assets/screens/music-player.webp" alt="Music mode player" loading="lazy" /></div><p>Music mode</p></figure>
-        <figure class="shot"><div class="phone"><img src="assets/screens/shorts.webp" alt="Shorts" loading="lazy" /></div><p>Shorts</p></figure>
-        <figure class="shot"><div class="phone"><img src="assets/screens/library.webp" alt="Library with history, watch time and playlists" loading="lazy" /></div><p>Library</p></figure>
+        <figure class="shot"><div class="phone"><img src="assets/screens/home.webp" width="540" height="1200" alt="Home feed with For you" loading="lazy" /></div><p>Home</p></figure>
+        <figure class="shot"><div class="phone"><img src="assets/screens/watch.webp" width="540" height="1200" alt="Watch page with chapters and comments" loading="lazy" /></div><p>Watch</p></figure>
+        <figure class="shot"><div class="phone"><img src="assets/screens/pip.webp" width="540" height="1200" alt="Floating player over the home feed" loading="lazy" /></div><p>Floating player</p></figure>
+        <figure class="shot"><div class="phone"><img src="assets/screens/music.webp" width="540" height="1200" alt="Music tab with recently played and picks for you" loading="lazy" /></div><p>Music</p></figure>
+        <figure class="shot"><div class="phone"><img src="assets/screens/music-player.webp" width="540" height="1200" alt="Music mode player" loading="lazy" /></div><p>Music mode</p></figure>
+        <figure class="shot"><div class="phone"><img src="assets/screens/shorts.webp" width="540" height="1200" alt="Shorts" loading="lazy" /></div><p>Shorts</p></figure>
+        <figure class="shot"><div class="phone"><img src="assets/screens/library.webp" width="540" height="1200" alt="Library with history, watch time and playlists" loading="lazy" /></div><p>Library</p></figure>
       </div>
     </section>
 
@@ -543,10 +581,27 @@
           <p class="section-lead">AdFree Tube isn't on the Play Store, so you install it directly — it takes three taps.</p>
         </div>
         <div class="steps">
-          <div class="card step reveal"><h3>Download the APK</h3><p>Tap <b>Download for Android</b>. Your browser may ask if you want to keep the file — choose <b>Download anyway</b>.</p></div>
+          <div class="card step reveal"><h3>Download the APK</h3><p>Tap <b>Download for Android &amp; TV</b>. Your browser may ask if you want to keep the file — choose <b>Download anyway</b>.</p></div>
           <div class="card step reveal"><h3>Allow the install</h3><p>Open the file. If Android asks, tap <b>Settings</b> and turn on <b>Allow from this source</b>, then go back.</p></div>
           <div class="card step reveal"><h3>Open and enjoy</h3><p>Tap <b>Install</b>, then <b>Open</b>. The app tells you when a new version is out — just download again to update.</p></div>
         </div>
+        <h3 class="steps-title reveal">On a TV (Android TV, Google TV, Fire TV)</h3>
+        <div class="steps">
+          <div class="card step reveal"><h3>Get Downloader</h3><p>Install the free <b>Downloader</b> app from your TV's app store (Play Store or Amazon Appstore). Or skip ahead: send the APK from your phone with <b>Send Files to TV</b>.</p></div>
+          <div class="card step reveal"><h3>Allow installs from it</h3><p>Open the TV's <b>Settings → Apps → Security</b> (Fire TV: <b>My Fire TV → Developer options</b>) and allow <b>Downloader</b> to install unknown apps.</p></div>
+          <div class="card step reveal"><h3>Type the link</h3><p>In Downloader, enter <code class="url">rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk</code> and press Go, then <b>Install</b>. AdFree Tube appears on your TV's home screen.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="whats-new" hidden>
+      <div class="wrap">
+        <div class="center reveal">
+          <div class="eyebrow">What's new</div>
+          <h2>Updated all the time.</h2>
+          <p class="section-lead">The latest releases — every one is free and updates over the old version.</p>
+        </div>
+        <div class="timeline js-releases"></div>
       </div>
     </section>
 
@@ -614,6 +669,30 @@
         var d = Math.round((Date.now() - new Date(date)) / 86400000);
         return d <= 0 ? 'today' : d === 1 ? 'yesterday' : d + ' days ago';
       }
+
+      // What's new: the last few releases from GitHub (the section stays hidden if that fails).
+      fetch('https://api.github.com/repos/rajkumar30598/Adfree-tube-landing/releases?per_page=4')
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (list) {
+          var box = document.querySelector('.js-releases');
+          if (!box || !Array.isArray(list) || !list.length) return;
+          list.forEach(function (rel) {
+            var notes = (rel.body || '').split(/\n\s*\n\*\*Install/)[0].replace(/\*\*/g, '').trim();
+            var card = document.createElement('div');
+            card.className = 'rel';
+            var h = document.createElement('h3');
+            h.textContent = 'Version ' + String(rel.tag_name || '').replace(/^v/, '');
+            var when = document.createElement('span');
+            when.textContent = rel.published_at ? ago(rel.published_at) : '';
+            h.append(when);
+            var p = document.createElement('p');
+            p.textContent = notes || 'Bug fixes and improvements.';
+            card.append(h, p);
+            box.append(card);
+          });
+          document.getElementById('whats-new').hidden = false;
+        })
+        .catch(function () {});
 
       fetch('remote-config.json', { cache: 'no-store' })
         .then(function (r) { return r.ok ? r.json() : null; })
