@@ -33,9 +33,16 @@
     "https://pipedapi.adminforge.de"
   ],
   "minVersion": "1.0.0",
-  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.9.4",
-  "latestVersion": "1.9.4",
-  "latestNotes": "Smart notifications: pick up videos you left half-way, keep your watch streak, a weekly recap, Watch later reminders, a song of the day and downloads-ready alerts (each can be switched off in Settings). Fun reminders every three hours with new jokes that don't repeat. Music tab remembers your recent searches. In landscape, settings open on the right like YouTube. Skip silence in playback settings.",
-  "apkSize": 59426777,
-  "releasedAt": "2026-10-23T15:36:39.072Z"
+  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.10.0",
+  "latestVersion": "1.10.0",
+  "latestNotes": "Now on Android TV: a TV version with a side menu, rows of videos, remote controls, voice search and a seekable progress bar (AdFree-Tube-TV.apk). Music tab shows songs only. Smoother scrolling at the end of lists. Usage stats now use a random install ID (no device or account ID).",
+  "apkSize": 59558013,
+  "releasedAt": "2026-10-24T13:34:23.149Z",
+  "tv": {
+    "latestVersion": "1.10.0",
+    "latestNotes": "Now on Android TV: a TV version with a side menu, rows of videos, remote controls, voice search and a seekable progress bar (AdFree-Tube-TV.apk). Music tab shows songs only. Smoother scrolling at the end of lists. Usage stats now use a random install ID (no device or account ID).",
+    "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube-TV.apk?v=1.10.0",
+    "apkSize": 59602221,
+    "releasedAt": "2026-10-24T13:34:23.149Z"
+  }
 }
