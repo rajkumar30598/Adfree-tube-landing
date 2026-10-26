@@ -33,16 +33,16 @@
     "https://pipedapi.adminforge.de"
   ],
   "minVersion": "1.0.0",
-  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.10.0",
-  "latestVersion": "1.10.0",
-  "latestNotes": "Now on Android TV: a TV version with a side menu, rows of videos, remote controls, voice search and a seekable progress bar (the same APK installs on TVs). Music tab shows songs only. Smoother scrolling at the end of lists. Usage stats now use a random install ID (no device or account ID).",
-  "apkSize": 59602221,
-  "releasedAt": "2026-10-24T13:34:23.149Z",
+  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.0.0",
+  "latestVersion": "2.0.0",
+  "latestNotes": "Songs keep playing with the phone locked: no more 'Backup servers are unavailable' between songs, and no gap between songs. Song mode autoplays similar songs. Seek previews when you drag the progress bar. Autoplay switch in fullscreen. Home feed keeps its place after fullscreen videos. Retries by itself when you unlock or get back online.",
+  "apkSize": 59621993,
+  "releasedAt": "2026-10-26T16:13:52.650Z",
   "tv": {
-    "latestVersion": "1.10.0",
-    "latestNotes": "Now on Android TV: a TV version with a side menu, rows of videos, remote controls, voice search and a seekable progress bar (the same APK installs on TVs). Music tab shows songs only. Smoother scrolling at the end of lists. Usage stats now use a random install ID (no device or account ID).",
-    "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=1.10.0",
-    "apkSize": 59602221,
-    "releasedAt": "2026-10-24T13:34:23.149Z"
+    "latestVersion": "2.0.0",
+    "latestNotes": "Songs keep playing with the phone locked: no more 'Backup servers are unavailable' between songs, and no gap between songs. Song mode autoplays similar songs. Seek previews when you drag the progress bar. Autoplay switch in fullscreen. Home feed keeps its place after fullscreen videos. Retries by itself when you unlock or get back online.",
+    "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.0.0",
+    "apkSize": 59621993,
+    "releasedAt": "2026-10-26T16:13:52.650Z"
   }
 }
