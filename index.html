@@ -8,14 +8,15 @@
   <meta name="theme-color" content="#0b0b0c" />
   <meta property="og:title" content="AdFree Tube — Every video. Zero ads." />
   <meta property="og:description" content="No ads, background play, picture-in-picture, offline downloads and a music player with lyrics — on your phone and your TV. Free, private, no account." />
-  <meta property="og:image" content="https://rajkumar30598.github.io/Adfree-tube-landing/assets/og-image.png" />
+  <meta property="og:image" content="https://rajkumar30598.github.io/Adfree-tube-landing/assets/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://rajkumar30598.github.io/Adfree-tube-landing/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AdFree Tube — Every video. Zero ads." />
-  <meta name="twitter:image" content="https://rajkumar30598.github.io/Adfree-tube-landing/assets/og-image.png" />
+  <meta name="twitter:image" content="https://rajkumar30598.github.io/Adfree-tube-landing/assets/og-image.jpg" />
   <link rel="canonical" href="https://rajkumar30598.github.io/Adfree-tube-landing/" />
   <script type="application/ld+json">
   {
@@ -27,7 +28,7 @@
     "description": "A free, private video player for Android phones and Android TV with no ads, background play, picture-in-picture, offline downloads and a music player with synced lyrics.",
     "url": "https://rajkumar30598.github.io/Adfree-tube-landing/",
     "downloadUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk",
-    "image": "https://rajkumar30598.github.io/Adfree-tube-landing/assets/og-image.png",
+    "image": "https://rajkumar30598.github.io/Adfree-tube-landing/assets/og-image.jpg",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
   }
   </script>
@@ -35,7 +36,10 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet" />
+  <!-- Loaded without blocking the first paint: system fonts show until Inter arrives. -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet" /></noscript>
   <style>
     :root {
       --bg: #0b0b0c;
@@ -615,6 +619,7 @@
           <details><summary>Is it really free?</summary><p>Yes. No subscription, no in-app purchases and no ads. Videos stream straight from the source to your phone, so there are no servers to pay for.</p></details>
           <details><summary>Do I need an account?</summary><p>No. Everything works without signing in. Subscriptions, history and Watch later are saved privately on your phone. You can import your existing subscriptions from Google Takeout in a few taps.</p></details>
           <details><summary>Is it safe to install?</summary><p>The app is signed, has no ads or ad trackers, collects only usage stats and crash reports (Firebase — tied to a random ID made for your install, never a device, advertising or account ID; no search terms, watched videos or account details), and asks only for the permissions it needs (notifications for upload alerts and the microphone for voice search, both optional). Android warns about any app installed outside the Play Store — that's expected.</p></details>
+          <details><summary>How can I check my download is genuine?</summary><p>Every release is signed with the same key. The signing certificate's SHA-256 fingerprint is <code class="url js-cert-sha">A1:6E:8A:A6:5E:D0:6F:E9:C0:E2:CA:B2:84:FA:34:3E:A6:1A:14:7B:36:28:95:34:9D:77:7D:BF:4F:C6:2F:96</code> and the current APK's SHA-256 is <code class="url js-apk-sha">listed in the release notes on GitHub</code>. Check with <code class="url">sha256sum AdFree-Tube.apk</code> or <code class="url">apksigner verify --print-certs AdFree-Tube.apk</code>. Android also refuses to install an update signed with a different key over the app you have.</p></details>
           <details><summary>How do I update?</summary><p>When a new version is released, the app shows an "update available" banner. Tap it (or come back to this page) and install the new APK over the old one — your data stays.</p></details>
           <details><summary>Can I move my data to a new phone?</summary><p>Yes. Go to Library → Backup and save everything (subscriptions, playlists, history, watch progress) to a file. On the new phone, install AdFree Tube and restore from that file.</p></details>
           <details><summary>Does it work on Android TV?</summary><p>Yes — there's a version made for the big screen, with a side menu, rows of videos, remote-friendly controls and voice search. It runs on Android TV, Google TV and Fire TV. It's the same APK as for phones — the app switches to its TV layout on a TV. Open this page in your TV's browser and download it, or send the APK to the TV with an app like <b>Send Files to TV</b>, then open it to install (allow installing from that app if the TV asks).</p></details>
@@ -705,6 +710,9 @@
           document.querySelectorAll('.js-download').forEach(function (el) { el.href = apk; });
           document.querySelectorAll('.js-version-pill').forEach(function (el) { el.textContent = 'Version ' + version + ' is out'; });
           document.querySelectorAll('.js-size').forEach(function (el) { el.textContent = 'v' + version + (cfg.apkSize ? ' · ' + mb(cfg.apkSize) : ''); });
+          // Checksums written by the release script (see the FAQ).
+          if (cfg.apkSha256) document.querySelectorAll('.js-apk-sha').forEach(function (el) { el.textContent = cfg.apkSha256; });
+          if (cfg.certSha256) document.querySelectorAll('.js-cert-sha').forEach(function (el) { el.textContent = cfg.certSha256; });
           var u = document.querySelector('.js-updated');
           if (u && cfg.releasedAt) u.textContent = 'Updated ' + ago(cfg.releasedAt);
           var n = document.querySelector('.js-notes');
