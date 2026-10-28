@@ -9,11 +9,12 @@
 # so browsers don't reuse a cached older copy.
 name: Deploy Pages
 
+# No "release" trigger: those runs start from the version tag, which the github-pages environment
+# refuses, so they always failed. scripts/release.mjs pushes remote-config.json after publishing,
+# and that push deploys the new APK.
 on:
   push:
     branches: [main]
-  release:
-    types: [published]
   workflow_dispatch:
 
 permissions:
