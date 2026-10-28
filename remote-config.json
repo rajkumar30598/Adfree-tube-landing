@@ -33,16 +33,20 @@
     "https://pipedapi.adminforge.de"
   ],
   "minVersion": "1.0.0",
-  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.0.0",
-  "latestVersion": "2.0.0",
-  "latestNotes": "Songs keep playing with the phone locked: no more 'Backup servers are unavailable' between songs, and no gap between songs. Song mode autoplays similar songs. Seek previews when you drag the progress bar. Autoplay switch in fullscreen. Home feed keeps its place after fullscreen videos. Retries by itself when you unlock or get back online.",
-  "apkSize": 59621993,
-  "releasedAt": "2026-10-26T16:13:52.650Z",
+  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.1.0",
+  "latestVersion": "2.1.0",
+  "latestNotes": "Sharp seek previews: rest your finger on the progress bar to see the real frame. Fullscreen always starts fitted to the screen, SponsorBlock skips can be undone, caption size and style, smoother player, safer backups, downloads that resume, and many fixes.",
+  "apkSize": 58112522,
+  "releasedAt": "2026-10-28T11:35:41.960Z",
   "tv": {
-    "latestVersion": "2.0.0",
-    "latestNotes": "Songs keep playing with the phone locked: no more 'Backup servers are unavailable' between songs, and no gap between songs. Song mode autoplays similar songs. Seek previews when you drag the progress bar. Autoplay switch in fullscreen. Home feed keeps its place after fullscreen videos. Retries by itself when you unlock or get back online.",
-    "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.0.0",
-    "apkSize": 59621993,
-    "releasedAt": "2026-10-26T16:13:52.650Z"
-  }
+    "latestVersion": "2.1.0",
+    "latestNotes": "Sharp seek previews: rest your finger on the progress bar to see the real frame. Fullscreen always starts fitted to the screen, SponsorBlock skips can be undone, caption size and style, smoother player, safer backups, downloads that resume, and many fixes.",
+    "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.1.0",
+    "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.1.0/AdFree-Tube.apk",
+    "apkSize": 58112522,
+    "releasedAt": "2026-10-28T11:35:41.960Z"
+  },
+  "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.1.0/AdFree-Tube.apk",
+  "apkSha256": "d5e675cbbb483c2a62531ff853630213329e2fd98924a289e653b5c7df7202ce",
+  "certSha256": "A1:6E:8A:A6:5E:D0:6F:E9:C0:E2:CA:B2:84:FA:34:3E:A6:1A:14:7B:36:28:95:34:9D:77:7D:BF:4F:C6:2F:96"
 }
