@@ -1,7 +1,0 @@
-# Files Cloudflare must not serve (the site is deployed from the repo root).
-.git
-.github
-.gitignore
-.assetsignore
-.DS_Store
-README.md

@@ -40,7 +40,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           mkdir _site
-          rsync -a --exclude .git --exclude .github --exclude .assetsignore --exclude _site ./ _site/
+          rsync -a --exclude .git --exclude .github --exclude _site ./ _site/
           tag=$(gh release list --repo "$GITHUB_REPOSITORY" --exclude-drafts --exclude-pre-releases --limit 1 --json tagName --jq '.[0].tagName')
           [ -n "$tag" ] || { echo "No releases found"; exit 1; }
           gh release download "$tag" --repo "$GITHUB_REPOSITORY" --pattern AdFree-Tube.apk --output _site/AdFree-Tube.apk
