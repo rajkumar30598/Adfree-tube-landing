@@ -33,20 +33,20 @@
     "https://pipedapi.adminforge.de"
   ],
   "minVersion": "1.0.0",
-  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.2.1",
-  "latestVersion": "2.2.1",
-  "latestNotes": "Cleaner update banner: one Update button on Home; if a download doesn't start, Library offers it from the website.",
-  "apkSize": 58130566,
-  "releasedAt": "2026-10-29T14:29:09.115Z",
+  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.3.0",
+  "latestVersion": "2.3.0",
+  "latestNotes": "Updates now install right inside the app. Music player takes the song's colours, and you can swipe the artwork to skip. Settings search finds Home categories and language.",
+  "apkSize": 58180290,
+  "releasedAt": "2026-10-29T15:54:19.035Z",
   "tv": {
-    "latestVersion": "2.2.1",
-    "latestNotes": "Cleaner update banner: one Update button on Home; if a download doesn't start, Library offers it from the website.",
-    "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.2.1",
-    "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.2.1/AdFree-Tube.apk",
-    "apkSize": 58130566,
-    "releasedAt": "2026-10-29T14:29:09.115Z"
+    "latestVersion": "2.3.0",
+    "latestNotes": "Updates now install right inside the app. Music player takes the song's colours, and you can swipe the artwork to skip. Settings search finds Home categories and language.",
+    "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.3.0",
+    "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.3.0/AdFree-Tube.apk",
+    "apkSize": 58180290,
+    "releasedAt": "2026-10-29T15:54:19.035Z"
   },
-  "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.2.1/AdFree-Tube.apk",
-  "apkSha256": "35d82033343d9919e922142b4dacf669945ac24b640208403b88fb686ed0ae09",
+  "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.3.0/AdFree-Tube.apk",
+  "apkSha256": "bb08bf2a25d44416e1bd5c4a97cc0f9bd6caa9c02014905a66336d77fce2bdcb",
   "certSha256": "A1:6E:8A:A6:5E:D0:6F:E9:C0:E2:CA:B2:84:FA:34:3E:A6:1A:14:7B:36:28:95:34:9D:77:7D:BF:4F:C6:2F:96"
 }
