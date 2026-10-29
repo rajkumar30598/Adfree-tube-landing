@@ -58,7 +58,9 @@
       --green: #4ade80;
       --grad: linear-gradient(135deg, var(--pink), var(--red) 45%, var(--orange));
       --radius: 20px;
-      --max: 1160px;
+      /* Content uses the window's width (with side room that grows on bigger screens), up to
+         this on very wide monitors, where longer lines would get hard to read. */
+      --max: 1680px;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -72,7 +74,7 @@
     }
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
-    .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 clamp(20px, 4vw, 72px); }
     .grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
     /* ---------- nav ---------- */
