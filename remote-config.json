@@ -33,20 +33,20 @@
     "https://pipedapi.adminforge.de"
   ],
   "minVersion": "1.0.0",
-  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.3.0",
-  "latestVersion": "2.3.0",
-  "latestNotes": "Updates now install right inside the app. Music player takes the song's colours, and you can swipe the artwork to skip. Settings search finds Home categories and language.",
-  "apkSize": 58180290,
-  "releasedAt": "2026-10-29T15:54:19.035Z",
+  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.3.1",
+  "latestVersion": "2.3.1",
+  "latestNotes": "Country can now be set to None for worldwide picks. The Website link is always on the app card in Library, and the creator card's buttons are more compact.",
+  "apkSize": 58180446,
+  "releasedAt": "2026-10-29T16:29:55.358Z",
   "tv": {
-    "latestVersion": "2.3.0",
-    "latestNotes": "Updates now install right inside the app. Music player takes the song's colours, and you can swipe the artwork to skip. Settings search finds Home categories and language.",
-    "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.3.0",
-    "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.3.0/AdFree-Tube.apk",
-    "apkSize": 58180290,
-    "releasedAt": "2026-10-29T15:54:19.035Z"
+    "latestVersion": "2.3.1",
+    "latestNotes": "Country can now be set to None for worldwide picks. The Website link is always on the app card in Library, and the creator card's buttons are more compact.",
+    "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.3.1",
+    "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.3.1/AdFree-Tube.apk",
+    "apkSize": 58180446,
+    "releasedAt": "2026-10-29T16:29:55.358Z"
   },
-  "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.3.0/AdFree-Tube.apk",
-  "apkSha256": "bb08bf2a25d44416e1bd5c4a97cc0f9bd6caa9c02014905a66336d77fce2bdcb",
+  "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.3.1/AdFree-Tube.apk",
+  "apkSha256": "f933f85b99574afeefff137d4374e8f9eaf8667f0225193dc858659a2aafb819",
   "certSha256": "A1:6E:8A:A6:5E:D0:6F:E9:C0:E2:CA:B2:84:FA:34:3E:A6:1A:14:7B:36:28:95:34:9D:77:7D:BF:4F:C6:2F:96"
 }
