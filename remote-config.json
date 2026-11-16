@@ -33,20 +33,20 @@
     "https://pipedapi.adminforge.de"
   ],
   "minVersion": "1.0.0",
-  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.3.2",
-  "latestVersion": "2.3.2",
-  "latestNotes": "Smaller download (about 58 MB, half the size). Channel pages: the header stays put while you swipe between tabs, and each tab keeps its place. History and Subscriptions filters stay at the top and remember your choice. Home and Subscriptions open instantly with your last feed, even offline. Fullscreen: brightness starts at your phone's level; speed and screenshot buttons removed. Double-tap seeking keeps adding with more taps. Hold for 2x keeps voices at normal pitch. Shorts: clearer buttons and a tap-to-expand title.",
-  "apkSize": 58192574,
-  "releasedAt": "2026-11-13T17:54:52.864Z",
+  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.3.3",
+  "latestVersion": "2.3.3",
+  "latestNotes": "Smarter autoplay: it keeps to what you're watching. Songs are followed by songs in the same language (a Tamil film song by Tamil film songs, never a god song, scene or trailer), comedy by comedy, and so on for every kind of video. Nothing repeats, not even another upload of a song you just heard.",
+  "apkSize": 58212730,
+  "releasedAt": "2026-11-16T17:01:49.284Z",
   "tv": {
-    "latestVersion": "2.3.2",
-    "latestNotes": "Smaller download (about 58 MB, half the size). Channel pages: the header stays put while you swipe between tabs, and each tab keeps its place. History and Subscriptions filters stay at the top and remember your choice. Home and Subscriptions open instantly with your last feed, even offline. Fullscreen: brightness starts at your phone's level; speed and screenshot buttons removed. Double-tap seeking keeps adding with more taps. Hold for 2x keeps voices at normal pitch. Shorts: clearer buttons and a tap-to-expand title.",
-    "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.3.2",
-    "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.3.2/AdFree-Tube.apk",
-    "apkSize": 58192574,
-    "releasedAt": "2026-11-13T17:54:52.864Z"
+    "latestVersion": "2.3.3",
+    "latestNotes": "Smarter autoplay: it keeps to what you're watching. Songs are followed by songs in the same language (a Tamil film song by Tamil film songs, never a god song, scene or trailer), comedy by comedy, and so on for every kind of video. Nothing repeats, not even another upload of a song you just heard.",
+    "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.3.3",
+    "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.3.3/AdFree-Tube.apk",
+    "apkSize": 58212730,
+    "releasedAt": "2026-11-16T17:01:49.284Z"
   },
-  "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.3.2/AdFree-Tube.apk",
-  "apkSha256": "fc6794fb09956d45dfeba925b7f8c526339b572ea2a8c9a3a6ceb57dd2c9aa09",
+  "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.3.3/AdFree-Tube.apk",
+  "apkSha256": "065e9981177b97f055dd2bb7b722d278fa1d30157b7a8f0c44dc19eed6132981",
   "certSha256": "A1:6E:8A:A6:5E:D0:6F:E9:C0:E2:CA:B2:84:FA:34:3E:A6:1A:14:7B:36:28:95:34:9D:77:7D:BF:4F:C6:2F:96"
 }
