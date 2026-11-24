@@ -33,20 +33,20 @@
     "https://pipedapi.adminforge.de"
   ],
   "minVersion": "1.0.0",
-  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.3.3",
-  "latestVersion": "2.3.3",
-  "latestNotes": "Smarter autoplay: it keeps to what you're watching. Songs are followed by songs in the same language (a Tamil film song by Tamil film songs, never a god song, scene or trailer), comedy by comedy, and so on for every kind of video. Nothing repeats, not even another upload of a song you just heard.",
-  "apkSize": 58212730,
-  "releasedAt": "2026-11-16T17:01:49.284Z",
+  "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.3.4",
+  "latestVersion": "2.3.4",
+  "latestNotes": "Music autoplay stays in your language, even for brand-new songs. After a Tamil song you get Tamil songs, not Telugu or Hindi dubs from the mix, whether it plays on by itself or you press Next, and the Up next list shows what will really play. It recognises composers, labels and new artists as you listen, keeps new songs with new songs, plays fewer songs by artists you skip, and finds more songs in your language instead of stopping.",
+  "apkSize": 58233598,
+  "releasedAt": "2026-11-24T14:05:48.474Z",
   "tv": {
-    "latestVersion": "2.3.3",
-    "latestNotes": "Smarter autoplay: it keeps to what you're watching. Songs are followed by songs in the same language (a Tamil film song by Tamil film songs, never a god song, scene or trailer), comedy by comedy, and so on for every kind of video. Nothing repeats, not even another upload of a song you just heard.",
-    "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.3.3",
-    "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.3.3/AdFree-Tube.apk",
-    "apkSize": 58212730,
-    "releasedAt": "2026-11-16T17:01:49.284Z"
+    "latestVersion": "2.3.4",
+    "latestNotes": "Music autoplay stays in your language, even for brand-new songs. After a Tamil song you get Tamil songs, not Telugu or Hindi dubs from the mix, whether it plays on by itself or you press Next, and the Up next list shows what will really play. It recognises composers, labels and new artists as you listen, keeps new songs with new songs, plays fewer songs by artists you skip, and finds more songs in your language instead of stopping.",
+    "updateUrl": "https://rajkumar30598.github.io/Adfree-tube-landing/AdFree-Tube.apk?v=2.3.4",
+    "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.3.4/AdFree-Tube.apk",
+    "apkSize": 58233598,
+    "releasedAt": "2026-11-24T14:05:48.474Z"
   },
-  "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.3.3/AdFree-Tube.apk",
-  "apkSha256": "065e9981177b97f055dd2bb7b722d278fa1d30157b7a8f0c44dc19eed6132981",
+  "releaseUrl": "https://github.com/rajkumar30598/Adfree-tube-landing/releases/download/v2.3.4/AdFree-Tube.apk",
+  "apkSha256": "df90e8252376ad91ced00f7edf5c2b199aa8809131765c07b7b7376d2a57d159",
   "certSha256": "A1:6E:8A:A6:5E:D0:6F:E9:C0:E2:CA:B2:84:FA:34:3E:A6:1A:14:7B:36:28:95:34:9D:77:7D:BF:4F:C6:2F:96"
 }
